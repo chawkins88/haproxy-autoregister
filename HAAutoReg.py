@@ -116,7 +116,7 @@ if __name__ == "__main__":
     parser_p = subparsers.add_parser('print', help="prints generated HAProxy conf")
     x = parser.parse_args(sys.argv[1:])
 
-    CONFIGFILE="./haautoreg.conf"
+    CONFIGFILE="/etc/haproxy/haautoreg.conf"
     if os.path.isfile(CONFIGFILE):
         # Read config
         with open(CONFIGFILE,"rb") as source:
